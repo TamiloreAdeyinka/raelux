@@ -436,18 +436,23 @@ const heroStack = document.querySelector("[data-hero-stack]");
 const heroCards = heroStack ? Array.from(heroStack.querySelectorAll(".hero-card")) : [];
 
 if (heroCards.length === 3) {
-  const heroPoses = [
+  const heroPosesDesktop = [
     { x: "0px", y: "0px", rotate: "0deg", scale: 1, z: 3 },
     { x: "-9%", y: "5%", rotate: "-8deg", scale: 0.92, z: 2 },
     { x: "9%", y: "6%", rotate: "8deg", scale: 0.9, z: 1 }
   ];
-
+  const heroPosesMobile = [
+    { x: "0px", y: "0px", rotate: "0deg", scale: 1, z: 3 },
+    { x: "-6%", y: "4%", rotate: "-6deg", scale: 0.94, z: 2 },
+    { x: "6%", y: "4.5%", rotate: "6deg", scale: 0.92, z: 1 }
+  ];
   let heroOrder = [0, 1, 2];
   let heroTimer = null;
 
   const applyHeroPoses = () => {
+    const poses = window.innerWidth < 720 ? heroPosesMobile : heroPosesDesktop;
     heroCards.forEach((card, i) => {
-      const pose = heroPoses[heroOrder[i]];
+      const pose = poses[heroOrder[i]];
       card.style.setProperty("--offset-x", pose.x);
       card.style.setProperty("--offset-y", pose.y);
       card.style.setProperty("--rotate", pose.rotate);
@@ -457,7 +462,7 @@ if (heroCards.length === 3) {
   };
 
   const shuffleHero = (direction = 1) => {
-    heroOrder = heroOrder.map((poseIndex) => (poseIndex + direction + heroPoses.length) % heroPoses.length);
+    heroOrder = heroOrder.map((poseIndex) => (poseIndex + direction + heroPosesDesktop.length) % heroPosesDesktop.length);
     applyHeroPoses();
   };
 

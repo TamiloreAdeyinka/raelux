@@ -1996,8 +1996,8 @@ button:focus-visible {
   }
 
   .hero-stage {
-    width: min(420px, calc(100% - 40px));
-    padding-bottom: 0;
+    width: min(340px, calc(100% - 100px));
+    padding-bottom: 28px;
   }
 
   .hero-watermark {
@@ -3234,8 +3234,8 @@ button:focus-visible {
   }
 
   .hero-stage {
-    width: min(400px, calc(100% - 32px));
-    padding-bottom: 0;
+    width: min(300px, calc(100% - 100px));
+    padding-bottom: 28px;
   }
 
   .hero-watermark {
