@@ -342,6 +342,26 @@ button:focus-visible {
   -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, rgba(0, 0, 0, 0.5) 76%, transparent 94%);
 }
 
+.hero-architectural-mobile {
+  display: none;
+}
+
+.hero-arch-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 26px;
+  pointer-events: none;
+}
+
+.hero-arch-edge-left {
+  left: 0;
+}
+
+.hero-arch-edge-right {
+  right: 0;
+}
+
 .hero-architectural svg {
   display: block;
   width: 100%;
@@ -357,33 +377,33 @@ button:focus-visible {
 
 .arch-primary {
   fill: none;
-  stroke: rgba(21, 23, 21, 0.24);
-  stroke-width: 1.5;
+  stroke: rgba(21, 23, 21, 0.28);
+  stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .arch-secondary {
   fill: none;
-  stroke: rgba(21, 23, 21, 0.16);
-  stroke-width: 1;
+  stroke: rgba(21, 23, 21, 0.19);
+  stroke-width: 1.1;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .arch-dash {
   fill: none;
-  stroke: rgba(21, 23, 21, 0.14);
-  stroke-width: 1;
+  stroke: rgba(21, 23, 21, 0.17);
+  stroke-width: 1.1;
   stroke-dasharray: 4 5;
 }
 
 .arch-fill-dot {
-  fill: rgba(21, 23, 21, 0.22);
+  fill: rgba(21, 23, 21, 0.26);
 }
 
 .arch-text {
-  fill: rgba(21, 23, 21, 0.32);
+  fill: rgba(21, 23, 21, 0.36);
   font-family: "Space Grotesk", sans-serif;
   font-size: 11px;
   letter-spacing: 0.05em;
@@ -3162,6 +3182,14 @@ button:focus-visible {
 }
 
 @media (max-width: 719px) {
+  .hero-architectural-desktop {
+    display: none;
+  }
+
+  .hero-architectural-mobile {
+    display: block;
+  }
+
   .desktop-copy {
     display: none;
   }
