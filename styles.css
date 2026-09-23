@@ -357,33 +357,33 @@ button:focus-visible {
 
 .arch-primary {
   fill: none;
-  stroke: rgba(21, 23, 21, 0.085);
-  stroke-width: 1;
+  stroke: rgba(21, 23, 21, 0.24);
+  stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .arch-secondary {
   fill: none;
-  stroke: rgba(21, 23, 21, 0.055);
-  stroke-width: 0.6;
+  stroke: rgba(21, 23, 21, 0.16);
+  stroke-width: 1;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .arch-dash {
   fill: none;
-  stroke: rgba(21, 23, 21, 0.045);
-  stroke-width: 0.6;
+  stroke: rgba(21, 23, 21, 0.14);
+  stroke-width: 1;
   stroke-dasharray: 4 5;
 }
 
 .arch-fill-dot {
-  fill: rgba(21, 23, 21, 0.075);
+  fill: rgba(21, 23, 21, 0.22);
 }
 
 .arch-text {
-  fill: rgba(21, 23, 21, 0.13);
+  fill: rgba(21, 23, 21, 0.32);
   font-family: "Space Grotesk", sans-serif;
   font-size: 11px;
   letter-spacing: 0.05em;
