@@ -32,6 +32,17 @@
   }
 }
 
+@keyframes omWatermarkRiseIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 @keyframes omHouseSettle {
   from {
     opacity: 0;
@@ -646,17 +657,19 @@ button:focus-visible {
 .hero-watermark {
   position: absolute;
   top: -1%;
-  right: 0;
   bottom: auto;
-  left: 0;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
   margin: 0;
+  width: max-content;
   color: rgba(21, 23, 21, 0.075);
   font-size: 150px;
   font-weight: 600;
   line-height: 0.86;
   user-select: none;
   white-space: nowrap;
-  animation: omRiseIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 100ms both;
+  animation: omWatermarkRiseIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 100ms both;
 }
 
 .hero-house {
@@ -2267,8 +2280,8 @@ button:focus-visible {
 
 /* Exact static-site translation of the Claude Design handoff. */
 @keyframes omWatermarkSettle {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
 .desktop-copy,
@@ -3618,7 +3631,6 @@ button:focus-visible {
   .hero h1,
   .hero-copy,
   .hero-actions,
-  .hero-watermark,
   .reveal-card,
   .why-connectors path,
   .why-connectors::before,
@@ -3628,6 +3640,13 @@ button:focus-visible {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-watermark {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: translateX(-50%) !important;
     transition: none !important;
   }
 }
