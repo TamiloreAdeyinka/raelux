@@ -327,9 +327,66 @@ button:focus-visible {
 
 .hero {
   position: relative;
+  isolation: isolate;
   background: #fff;
   overflow: hidden;
   text-align: center;
+}
+
+.hero-architectural {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, black 0%, black 55%, rgba(0, 0, 0, 0.5) 76%, transparent 94%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, rgba(0, 0, 0, 0.5) 76%, transparent 94%);
+}
+
+.hero-architectural svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-architectural path,
+.hero-architectural line,
+.hero-architectural circle,
+.hero-architectural rect {
+  vector-effect: non-scaling-stroke;
+}
+
+.arch-primary {
+  fill: none;
+  stroke: rgba(21, 23, 21, 0.085);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.arch-secondary {
+  fill: none;
+  stroke: rgba(21, 23, 21, 0.055);
+  stroke-width: 0.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.arch-dash {
+  fill: none;
+  stroke: rgba(21, 23, 21, 0.045);
+  stroke-width: 0.6;
+  stroke-dasharray: 4 5;
+}
+
+.arch-fill-dot {
+  fill: rgba(21, 23, 21, 0.075);
+}
+
+.arch-text {
+  fill: rgba(21, 23, 21, 0.13);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.05em;
 }
 
 .hero-sketches {
@@ -422,6 +479,8 @@ button:focus-visible {
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 1180px;
   margin: 0 auto;
   padding: 36px 24px 0;
@@ -558,6 +617,7 @@ button:focus-visible {
 
 .hero-stage {
   position: relative;
+  z-index: 1;
   width: min(640px, 48vw);
   margin: 0 auto;
   padding-bottom: 56px;

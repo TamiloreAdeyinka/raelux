@@ -100,63 +100,113 @@
 
     <main id="main">
       <section id="top" class="hero">
-        <div class="hero-sketches" aria-hidden="true">
-          <svg class="sketch sketch-plan" viewBox="0 0 180 150" fill="none">
-            <defs>
-              <filter id="sketchFilter" x="-30%" y="-30%" width="160%" height="160%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="6" result="noise"/>
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.2"/>
-              </filter>
-            </defs>
-            <g filter="url(#sketchFilter)" stroke="#151715" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M8 8 H132 V88 H72 V132 H8 Z"/>
-              <path d="M72 88 V132"/>
-              <path d="M40 132 A22 22 0 0 0 62 110"/>
-              <path d="M132 40 H164"/>
-              <path d="M148 24 V56"/>
-              <circle cx="156" cy="16" r="2.4" fill="#151715" stroke="none"/>
+        <div class="hero-architectural" aria-hidden="true">
+          <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice" fill="none" focusable="false">
+            <g class="arch-dash">
+              <path d="M260 60 L500 850"/>
+              <path d="M740 60 L500 850"/>
             </g>
-          </svg>
-          <svg class="sketch sketch-compass" viewBox="0 0 120 120" fill="none">
-            <g filter="url(#sketchFilter)" stroke="#151715" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="60" cy="62" r="44"/>
-              <path d="M60 22 L60 102 M20 62 L100 62"/>
-              <path d="M60 18 L52 38 L60 32 L68 38 Z" fill="#151715" stroke="none"/>
+
+            <g class="arch-primary">
+              <rect x="150" y="30" width="700" height="14"/>
+              <rect x="210" y="48" width="580" height="10"/>
+              <rect x="270" y="62" width="460" height="7"/>
             </g>
-            <text x="60" y="14" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#151715">N</text>
-          </svg>
-          <svg class="sketch sketch-elevation" viewBox="0 0 140 110" fill="none">
-            <g filter="url(#sketchFilter)" stroke="#151715" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 70 L70 20 L130 70"/>
-              <path d="M10 70 H130"/>
-              <path d="M40 70 V50 H100 V70"/>
-              <path d="M140 20 V70"/>
-              <path d="M136 20 H144 M136 70 H144"/>
+            <g class="arch-fill-dot">
+              <circle cx="250" cy="37" r="2.5"/>
+              <circle cx="350" cy="37" r="2.5"/>
+              <circle cx="450" cy="37" r="2.5"/>
+              <circle cx="550" cy="37" r="2.5"/>
+              <circle cx="650" cy="37" r="2.5"/>
+              <circle cx="750" cy="37" r="2.5"/>
             </g>
-          </svg>
-          <svg class="sketch sketch-section" viewBox="0 0 120 130" fill="none">
-            <g filter="url(#sketchFilter)" stroke="#151715" stroke-width="1.3" stroke-linecap="round">
-              <path d="M20 10 V100"/>
-              <path d="M40 10 V100"/>
-              <path d="M20 20 L40 30 M20 35 L40 45 M20 50 L40 60 M20 65 L40 75 M20 80 L40 90"/>
-              <path d="M10 100 H90"/>
-              <path d="M14 104 L20 100 M24 104 L30 100 M34 104 L40 100 M44 104 L50 100 M54 104 L60 100 M64 104 L70 100 M74 104 L80 100"/>
+
+            <g class="arch-secondary">
+              <path d="M40 15 V900 M68 15 V900 M96 15 V900 M124 15 V900 M152 15 V900 M180 15 V900 M208 15 V900 M236 15 V900"/>
             </g>
-          </svg>
-          <svg class="sketch sketch-scale" viewBox="0 0 160 40" fill="none">
-            <g filter="url(#sketchFilter)" stroke="#151715" stroke-width="1.3" stroke-linecap="round">
-              <path d="M10 20 H150"/>
-              <path d="M10 14 V26 M45 16 V24 M80 14 V26 M115 16 V24 M150 14 V26"/>
+            <g class="arch-primary">
+              <rect x="90" y="180" width="110" height="560"/>
+              <path d="M20 900 H260"/>
             </g>
-            <text x="6" y="37" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#151715">0</text>
-            <text x="68" y="37" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#151715">5M</text>
-            <text x="136" y="37" font-family="'Space Grotesk', sans-serif" font-size="9" fill="#151715">10M</text>
-          </svg>
-          <svg class="sketch sketch-window" viewBox="0 0 100 120" fill="none">
-            <g filter="url(#sketchFilter)" stroke="#151715" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="15" y="10" width="70" height="100"/>
-              <path d="M50 10 V110 M15 60 H85"/>
+            <g class="arch-dash">
+              <path d="M200 740 A110 110 0 0 0 90 630"/>
             </g>
+            <g class="arch-secondary">
+              <path d="M15 180 H23 M15 740 H23 M15 180 V740"/>
+            </g>
+            <text class="arch-text" x="8" y="462" transform="rotate(-90 8 462)" text-anchor="middle">2100</text>
+
+            <g class="arch-secondary">
+              <path d="M770 30 H970"/>
+              <path d="M800 30 C785 300 815 600 800 900"/>
+              <path d="M840 30 C825 300 855 600 840 900"/>
+              <path d="M880 30 C865 300 895 600 880 900"/>
+              <path d="M920 30 C905 300 935 600 920 900"/>
+              <path d="M955 30 C940 300 970 600 955 900"/>
+            </g>
+
+            <g class="arch-primary">
+              <rect x="310" y="560" width="380" height="90" rx="16"/>
+              <rect x="310" y="650" width="380" height="60" rx="8"/>
+              <rect x="290" y="595" width="36" height="120" rx="12"/>
+              <rect x="674" y="595" width="36" height="120" rx="12"/>
+            </g>
+            <g class="arch-secondary">
+              <path d="M440 650 V705 M560 650 V705"/>
+              <path d="M320 710 L316 735 M680 710 L684 735 M340 715 L338 738 M660 715 L662 738"/>
+            </g>
+
+            <g class="arch-primary">
+              <rect x="380" y="760" width="220" height="16" rx="6"/>
+            </g>
+            <g class="arch-secondary">
+              <path d="M390 776 L386 832 M590 776 L594 832 M430 776 L428 820 M550 776 L552 820"/>
+            </g>
+
+            <g class="arch-secondary">
+              <path d="M640 95 V260"/>
+              <path d="M640 260 L590 330 M640 260 L690 320 M640 260 L600 380 M640 260 L670 390 M640 260 L640 300"/>
+            </g>
+            <g class="arch-fill-dot">
+              <circle cx="590" cy="330" r="7"/>
+              <circle cx="690" cy="320" r="7"/>
+              <circle cx="600" cy="380" r="6"/>
+              <circle cx="670" cy="390" r="6"/>
+              <circle cx="640" cy="300" r="8"/>
+            </g>
+
+            <g class="arch-primary">
+              <rect x="740" y="580" width="150" height="140" rx="22"/>
+              <rect x="740" y="680" width="150" height="55" rx="10"/>
+              <rect x="722" y="610" width="28" height="110" rx="10"/>
+              <rect x="880" y="610" width="28" height="110" rx="10"/>
+            </g>
+            <g class="arch-secondary">
+              <path d="M810 735 V770"/>
+            </g>
+
+            <g class="arch-primary">
+              <rect x="910" y="660" width="70" height="10" rx="4"/>
+            </g>
+            <g class="arch-secondary">
+              <path d="M918 670 L912 810 M945 670 L945 815 M972 670 L978 810"/>
+            </g>
+            <g class="arch-fill-dot">
+              <circle cx="945" cy="650" r="6"/>
+            </g>
+
+            <g class="arch-primary">
+              <path d="M20 900 H980"/>
+            </g>
+            <g class="arch-secondary">
+              <path d="M20 900 L140 960 M980 900 L860 960"/>
+            </g>
+
+            <g class="arch-secondary">
+              <path d="M310 540 H690"/>
+              <path d="M310 532 V548 M690 532 V548"/>
+            </g>
+            <text class="arch-text" x="500" y="526" text-anchor="middle">3400</text>
           </svg>
         </div>
         <div class="hero-content">
